@@ -61,11 +61,13 @@ int pthread_sleep (int seconds){
 
 }
 
-int lastLandingId = 0;
-int lastDepartingId = -1;
-int lastEmergencyId = 666666;
+int last_landing_id = 0;
+int last_departing_id = -1;
+int last_emergency_id = 6666; // initial identifiers
 int t = 1; // Time constant
 int queues_log_time = 5; //default
+double seconds = 120;
+double probability = 0.5;
 
 //Plane class
 class Plane{
@@ -88,10 +90,53 @@ public:
         pthread_cond_init(cond_var, nullptr);
     }
 };
-std::queue <Plane> planes_landing;
-std::queue <Plane> planes_departing;
-std::queue <Plane> planes_emergency;
-std::string getQueue(std::queue<Plane> q)
+
+//Atomic Queue data structure
+class atomic_plane_queue{
+    pthread_mutex_t mutex;
+    std::queue <Plane> queue;
+public:
+
+    std::queue<Plane> &getQueue(){
+        pthread_mutex_lock(&mutex);
+        std::queue<Plane> &temp = queue;
+        pthread_mutex_unlock(&mutex);
+        return temp;
+    }
+
+    atomic_plane_queue(){
+        pthread_mutex_init(&mutex, nullptr);
+    }
+    Plane& front(){
+        pthread_mutex_lock(&mutex);
+        Plane& temp = queue.front();
+        pthread_mutex_unlock(&mutex);
+        return temp;
+    }
+    bool empty(){
+        pthread_mutex_lock(&mutex);
+        bool temp = queue.empty();
+        pthread_mutex_unlock(&mutex);
+        return temp;
+    }
+    void push(Plane& plane){
+        pthread_mutex_lock(&mutex);
+        queue.push(plane);
+        pthread_mutex_unlock(&mutex);
+    }
+    void pop(){
+        pthread_mutex_lock(&mutex);
+        queue.pop();
+        pthread_mutex_unlock(&mutex);
+    }
+
+};
+
+//Atomic Queues
+atomic_plane_queue planes_landing;
+atomic_plane_queue planes_departing;
+atomic_plane_queue planes_emergency; //Even if emergency comes in every 40 sec, why treat different?
+std::string get_queue_as_string(std::queue<Plane> q)
 {
     std::string temp;
     //printing content of queue
@@ -103,8 +148,8 @@ std::string getQueue(std::queue<Plane> q)
     return temp;
 }
 
-//Logging Related Functions
-void finalLog(std::list<Plane *> list, int startTime){
+//Logging related functions
+void log_final(std::list<Plane *> list, int startTime){
 
     const char separator = ' ';
     list.reverse();
@@ -136,9 +181,9 @@ void finalLog(std::list<Plane *> list, int startTime){
     }
     std::cout << "------------------------------------------------------------------------------\n";
 }
-void queueLog(int t) {
-    std::string landQ = getQueue(planes_landing);
-    std::string depQ = getQueue(planes_departing);
+void log_queue(int t) {
+    std::string landQ = get_queue_as_string(planes_landing.getQueue());
+    std::string depQ = get_queue_as_string(planes_departing.getQueue());
     std::string landLog = "Landing Queue at\tt = ";
     std::string depLog = "Departing Queue at\tt = ";
     landLog += std::to_string(t);
@@ -209,6 +254,7 @@ void log_tower_approvals(Plane *plane) {
     }
 }
 
+//Plane thread functions
 void *landing_plane(void *arg){
 
     Plane *plane = static_cast<Plane *>(arg);
@@ -246,12 +292,13 @@ void *emergency_plane(void *arg){
 
 }
 
-//Air Trafic Controller Section
+//Air Trafic Controller helper methods, class and thread function
 void land_first_plane(){
     //TODO: Land the first plane in the landing queue.
     log_tower_approvals(&planes_landing.front());
     pthread_sleep(2 * t);
     log_tower_finishes(&planes_landing.front());
+    //sending signal to plane
     pthread_mutex_t *mutex = planes_landing.front().mutex;
     pthread_cond_t *cond_var = planes_landing.front().cond_var;
     pthread_mutex_lock(mutex);
@@ -264,6 +311,7 @@ void depart_first_plane(){
     log_tower_approvals(&planes_departing.front());
     pthread_sleep(2 * t);
     log_tower_finishes(&planes_departing.front());
+    //sending signal to plane
     pthread_mutex_t *mutex = planes_departing.front().mutex;
     pthread_cond_t *cond_var = planes_departing.front().cond_var;
     pthread_mutex_lock(mutex);
@@ -276,6 +324,7 @@ void emergency_first_plane(){
     log_tower_approvals(&planes_emergency.front());
     pthread_sleep(2 * t);
     log_tower_finishes(&planes_emergency.front());
+    //sending signal to plane
     pthread_mutex_t *mutex = planes_emergency.front().mutex;
     pthread_cond_t *cond_var = planes_emergency.front().cond_var;
     pthread_mutex_lock(mutex);
@@ -300,9 +349,10 @@ void *air_traffic_controller(void *arg){
             depart_first_plane();
         }
          */ //Prioritize Landing if Departing Queue < 5
+        //Down below is my implemented scheduling algorithm
         if(!planes_emergency.empty()) emergency_first_plane();
         else if(!planes_landing.empty() && !planes_departing.empty()){
-            double priority_multiplier = 0.5;
+            double priority_multiplier = 0.7;
             double departing_wait_time = getCurrentTime() - planes_departing.front().requestTime;
             double landing_wait_time = getCurrentTime() - planes_landing.front().requestTime;
             bool prioritize_landing = false;
@@ -340,6 +390,8 @@ public:
     }
 };
 
+// I know it was kind of unnecessary to create a thread for a simulation but I liked it this way ^^
+//Simulation class and thread function
 void *runSimulation(void *args){
 
     std::list<Plane *> planeList;
@@ -351,12 +403,12 @@ void *runSimulation(void *args){
 
     //Initial planes
     Plane *init;
-    lastLandingId += 2;
-    init = new Plane(lastLandingId, 0, getCurrentTime());
+    last_landing_id += 2;
+    init = new Plane(last_landing_id, 0, getCurrentTime());
     planeList.push_front(init);
     pthread_create(init->plane_tid, init->plane_attr, landing_plane, init);
-    lastDepartingId += 2;
-    init = new Plane(lastDepartingId, 1, getCurrentTime());
+    last_departing_id += 2;
+    init = new Plane(last_departing_id, 1, getCurrentTime());
     planeList.push_front(init);
     pthread_create(init->plane_tid, init->plane_attr, departing_plane, init);
 
@@ -366,50 +418,49 @@ void *runSimulation(void *args){
         pthread_sleep(1 * t);
         Plane *temp;
         if((getCurrentTime() - startTime) % (40 * t) == 0){
-            temp = new Plane(lastEmergencyId++, 2, getCurrentTime());
+            temp = new Plane(last_emergency_id++, 2, getCurrentTime());
             planeList.push_front(temp);
             pthread_create(temp->plane_tid, temp->plane_attr, emergency_plane, temp);
         }else{
             int random = rand() % 100;
             if(random < 50){
                 //TODO: Create one plane thread landing
-                lastLandingId += 2;
-                temp = new Plane(lastLandingId, 0, getCurrentTime());
+                last_landing_id += 2;
+                temp = new Plane(last_landing_id, 0, getCurrentTime());
                 planeList.push_front(temp);
                 pthread_create(temp->plane_tid, temp->plane_attr, landing_plane, temp);
             }else{
                 //TODO: Create one plane thread departing
-                lastDepartingId += 2;
-                temp = new Plane(lastDepartingId, 1, getCurrentTime());
+                last_departing_id += 2;
+                temp = new Plane(last_departing_id, 1, getCurrentTime());
                 planeList.push_front(temp);
                 pthread_create(temp->plane_tid, temp->plane_attr, departing_plane, temp);
             }
         }
         if((getCurrentTime() - startTime) % queues_log_time == 0){
-            queueLog(getCurrentTime() - startTime);
+            log_queue(getCurrentTime() - startTime);
         }
     }
     pthread_sleep(1);
-    finalLog(planeList, startTime);
+    log_final(planeList, startTime);
     return nullptr;
 
 }
 class Simulation{
-
     ControlTower *control_tower;
     pthread_t *sim_tid;
     pthread_attr_t *sim_attr;
-    double *s;
-    double *p;
+    double s;
+    double p;
     double args[2];
 
 public:
-    Simulation(double *s, double *p, ControlTower *ct) : s(s), p(p) {
+    Simulation(double s, double p, ControlTower *ct) : s(s), p(p) {
         sim_attr = static_cast<pthread_attr_t *>(malloc(sizeof(pthread_attr_t)));
         sim_tid = static_cast<pthread_t *>(malloc(sizeof(pthread_t)));
         pthread_attr_init(sim_attr);
-        args[0] = *s;
-        args[1] = *p;
+        args[0] = s;
+        args[1] = p;
         control_tower = ct;
     }
     void run(){
@@ -425,21 +476,16 @@ int main(int argc, char **args)
 {
     //Parse Command Line Args
     //TODO: Parse from CLI
-    double *seconds = static_cast<double *>(malloc(sizeof(double)));
-    double *probability = static_cast<double *>(malloc(sizeof(double)));
 
     std::string sArg = "-s";
     std::string pArg = "-p";
     std::string seedArg = "-seed";
     std::string queueLogArg = "-n";
 
-    //defaults
-    *seconds = 120;
-    *probability = 0.5;
     for(int i = 1; i < argc; i+=2){
         int value = std::atoi(args[i+1]);
-        if(sArg == args[i]) *seconds = value;
-        if(pArg == args[i]) *probability = std::stod(args[i+1]);
+        if(sArg == args[i]) seconds = value;
+        if(pArg == args[i]) probability = std::stod(args[i+1]);
         if(seedArg == args[i]) srand(value);
         if(queueLogArg == args[i]) queues_log_time = value;
     }

@@ -1,195 +1,195 @@
 
 Simulation will take 60 seconds. Probability is 0.500000. Operator Name: Walter R. White. -Albuquerque International Sunport
-- 2020-05-02 22:55:44 - [Plane 2] Requesting permission for landing.
-- 2020-05-02 22:55:44 - [ATC] Permission given to Plane 2 to land.
-- 2020-05-02 22:55:44 - [Plane 1] Requesting permission for departing.
-- 2020-05-02 22:55:45 - [Plane 3] Requesting permission for departing.
-- 2020-05-02 22:55:46 - [ATC] Plane 2 successfully landed.
-- 2020-05-02 22:55:46 - [ATC] Permission given to Plane 1 to depart.
-- 2020-05-02 22:55:46 - [Plane 5] Requesting permission for departing.
-- 2020-05-02 22:55:47 - [Plane 7] Requesting permission for departing.
-- 2020-05-02 22:55:48 - [Plane 4] Requesting permission for landing.
-- 2020-05-02 22:55:48 - [ATC] Plane 1 successfully departed.
-- 2020-05-02 22:55:48 - [ATC] Permission given to Plane 3 to depart.
+- 2020-05-03 02:36:16 - [ATC] Permission given to Plane 2 to land.
+- 2020-05-03 02:36:16 - [Plane 2] Requesting permission for landing.
+- 2020-05-03 02:36:16 - [Plane 1] Requesting permission for departing.
+- 2020-05-03 02:36:17 - [Plane 3] Requesting permission for departing.
+- 2020-05-03 02:36:18 - [ATC] Plane 2 successfully landed.
+- 2020-05-03 02:36:18 - [ATC] Permission given to Plane 1 to depart.
+- 2020-05-03 02:36:18 - [Plane 5] Requesting permission for departing.
+- 2020-05-03 02:36:19 - [Plane 7] Requesting permission for departing.
+- 2020-05-03 02:36:20 - [ATC] Plane 1 successfully departed.
+- 2020-05-03 02:36:20 - [ATC] Permission given to Plane 3 to depart.
+- 2020-05-03 02:36:20 - [Plane 4] Requesting permission for landing.
 Landing Queue at	t = 5: 4<-
 Departing Queue at	t = 5: 3<-5<-7<-
-- 2020-05-02 22:55:49 - [Plane 9] Requesting permission for departing.
-- 2020-05-02 22:55:50 - [Plane 6] Requesting permission for landing.
-- 2020-05-02 22:55:50 - [ATC] Plane 3 successfully departed.
-- 2020-05-02 22:55:50 - [ATC] Permission given to Plane 5 to depart.
-- 2020-05-02 22:55:51 - [Plane 11] Requesting permission for departing.
-- 2020-05-02 22:55:52 - [ATC] Plane 5 successfully departed.
-- 2020-05-02 22:55:52 - [ATC] Permission given to Plane 4 to land.
-- 2020-05-02 22:55:52 - [Plane 13] Requesting permission for departing.
-- 2020-05-02 22:55:53 - [Plane 8] Requesting permission for landing.
-- 2020-05-02 22:55:54 - [ATC] Plane 4 successfully landed.
-- 2020-05-02 22:55:54 - [ATC] Permission given to Plane 6 to land.
-- 2020-05-02 22:55:54 - [Plane 10] Requesting permission for landing.
+- 2020-05-03 02:36:21 - [Plane 9] Requesting permission for departing.
+- 2020-05-03 02:36:22 - [ATC] Plane 3 successfully departed.
+- 2020-05-03 02:36:22 - [ATC] Permission given to Plane 5 to depart.
+- 2020-05-03 02:36:22 - [Plane 6] Requesting permission for landing.
+- 2020-05-03 02:36:23 - [Plane 11] Requesting permission for departing.
+- 2020-05-03 02:36:24 - [ATC] Plane 5 successfully departed.
+- 2020-05-03 02:36:24 - [ATC] Permission given to Plane 4 to land.
+- 2020-05-03 02:36:24 - [Plane 13] Requesting permission for departing.
+- 2020-05-03 02:36:25 - [Plane 8] Requesting permission for landing.
+- 2020-05-03 02:36:26 - [ATC] Plane 4 successfully landed.
+- 2020-05-03 02:36:26 - [ATC] Permission given to Plane 7 to depart.
 Landing Queue at	t = 10: 6<-8<-
 Departing Queue at	t = 10: 7<-9<-11<-13<-
-- 2020-05-02 22:55:55 - [Plane 15] Requesting permission for departing.
-- 2020-05-02 22:55:56 - [ATC] Plane 6 successfully landed.
-- 2020-05-02 22:55:56 - [ATC] Permission given to Plane 7 to depart.
-- 2020-05-02 22:55:56 - [Plane 12] Requesting permission for landing.
-- 2020-05-02 22:55:57 - [Plane 17] Requesting permission for departing.
-- 2020-05-02 22:55:58 - [ATC] Plane 7 successfully departed.
-- 2020-05-02 22:55:58 - [ATC] Permission given to Plane 8 to land.
-- 2020-05-02 22:55:58 - [Plane 19] Requesting permission for departing.
+- 2020-05-03 02:36:26 - [Plane 10] Requesting permission for landing.
+- 2020-05-03 02:36:27 - [Plane 15] Requesting permission for departing.
+- 2020-05-03 02:36:28 - [ATC] Plane 7 successfully departed.
+- 2020-05-03 02:36:28 - [ATC] Permission given to Plane 6 to land.
+- 2020-05-03 02:36:28 - [Plane 12] Requesting permission for landing.
+- 2020-05-03 02:36:29 - [Plane 17] Requesting permission for departing.
+- 2020-05-03 02:36:30 - [ATC] Plane 6 successfully landed.
+- 2020-05-03 02:36:30 - [ATC] Permission given to Plane 9 to depart.
+- 2020-05-03 02:36:30 - [Plane 19] Requesting permission for departing.
 Landing Queue at	t = 15: 8<-10<-12<-
 Departing Queue at	t = 15: 9<-11<-13<-15<-17<-19<-
-- 2020-05-02 22:55:59 - [Plane 21] Requesting permission for departing.
-- 2020-05-02 22:56:00 - [ATC] Plane 8 successfully landed.
-- 2020-05-02 22:56:00 - [ATC] Permission given to Plane 10 to land.
-- 2020-05-02 22:56:00 - [Plane 14] Requesting permission for landing.
-- 2020-05-02 22:56:01 - [Plane 16] Requesting permission for landing.
-- 2020-05-02 22:56:02 - [ATC] Plane 10 successfully landed.
-- 2020-05-02 22:56:02 - [ATC] Permission given to Plane 9 to depart.
-- 2020-05-02 22:56:02 - [Plane 18] Requesting permission for landing.
-- 2020-05-02 22:56:03 - [Plane 23] Requesting permission for departing.
-- 2020-05-02 22:56:04 - [ATC] Plane 9 successfully departed.
-- 2020-05-02 22:56:04 - [ATC] Permission given to Plane 12 to land.
+- 2020-05-03 02:36:31 - [Plane 21] Requesting permission for departing.
+- 2020-05-03 02:36:32 - [ATC] Plane 9 successfully departed.
+- 2020-05-03 02:36:32 - [ATC] Permission given to Plane 8 to land.
+- 2020-05-03 02:36:32 - [Plane 14] Requesting permission for landing.
+- 2020-05-03 02:36:33 - [Plane 16] Requesting permission for landing.
+- 2020-05-03 02:36:34 - [ATC] Plane 8 successfully landed.
+- 2020-05-03 02:36:34 - [ATC] Permission given to Plane 10 to land.
+- 2020-05-03 02:36:34 - [Plane 18] Requesting permission for landing.
+- 2020-05-03 02:36:35 - [Plane 23] Requesting permission for departing.
+- 2020-05-03 02:36:36 - [ATC] Plane 10 successfully landed.
+- 2020-05-03 02:36:36 - [ATC] Permission given to Plane 11 to depart.
 Landing Queue at	t = 20: 12<-14<-16<-18<-
 Departing Queue at	t = 20: 11<-13<-15<-17<-19<-21<-23<-
-- 2020-05-02 22:56:04 - [Plane 20] Requesting permission for landing.
-- 2020-05-02 22:56:05 - [Plane 22] Requesting permission for landing.
-- 2020-05-02 22:56:06 - [ATC] Plane 12 successfully landed.
-- 2020-05-02 22:56:06 - [ATC] Permission given to Plane 11 to depart.
-- 2020-05-02 22:56:06 - [Plane 25] Requesting permission for departing.
-- 2020-05-02 22:56:07 - [Plane 27] Requesting permission for departing.
-- 2020-05-02 22:56:08 - [ATC] Plane 11 successfully departed.
-- 2020-05-02 22:56:08 - [ATC] Permission given to Plane 13 to depart.
-- 2020-05-02 22:56:08 - [Plane 24] Requesting permission for landing.
+- 2020-05-03 02:36:36 - [Plane 20] Requesting permission for landing.
+- 2020-05-03 02:36:37 - [Plane 22] Requesting permission for landing.
+- 2020-05-03 02:36:38 - [ATC] Plane 11 successfully departed.
+- 2020-05-03 02:36:38 - [ATC] Permission given to Plane 12 to land.
+- 2020-05-03 02:36:38 - [Plane 25] Requesting permission for departing.
+- 2020-05-03 02:36:39 - [Plane 27] Requesting permission for departing.
+- 2020-05-03 02:36:40 - [ATC] Plane 12 successfully landed.
+- 2020-05-03 02:36:40 - [ATC] Permission given to Plane 13 to depart.
+- 2020-05-03 02:36:40 - [Plane 24] Requesting permission for landing.
 Landing Queue at	t = 25: 14<-16<-18<-20<-22<-24<-
 Departing Queue at	t = 25: 13<-15<-17<-19<-21<-23<-25<-27<-
-- 2020-05-02 22:56:09 - [Plane 29] Requesting permission for departing.
-- 2020-05-02 22:56:10 - [ATC] Plane 13 successfully departed.
-- 2020-05-02 22:56:10 - [ATC] Permission given to Plane 14 to land.
-- 2020-05-02 22:56:10 - [Plane 26] Requesting permission for landing.
-- 2020-05-02 22:56:11 - [Plane 31] Requesting permission for departing.
-- 2020-05-02 22:56:12 - [ATC] Plane 14 successfully landed.
-- 2020-05-02 22:56:12 - [ATC] Permission given to Plane 16 to land.
-- 2020-05-02 22:56:12 - [Plane 28] Requesting permission for landing.
-- 2020-05-02 22:56:13 - [Plane 33] Requesting permission for departing.
-- 2020-05-02 22:56:14 - [ATC] Plane 16 successfully landed.
-- 2020-05-02 22:56:14 - [ATC] Permission given to Plane 18 to land.
-Landing Queue at	t = 30: 18<-20<-22<-24<-26<-28<-
-Departing Queue at	t = 30: 15<-17<-19<-21<-23<-25<-27<-29<-31<-33<-
-- 2020-05-02 22:56:14 - [Plane 30] Requesting permission for landing.
-- 2020-05-02 22:56:15 - [Plane 32] Requesting permission for landing.
-- 2020-05-02 22:56:16 - [ATC] Plane 18 successfully landed.
-- 2020-05-02 22:56:16 - [ATC] Permission given to Plane 20 to land.
-- 2020-05-02 22:56:16 - [Plane 34] Requesting permission for landing.
-- 2020-05-02 22:56:17 - [Plane 36] Requesting permission for landing.
-- 2020-05-02 22:56:18 - [ATC] Plane 20 successfully landed.
-- 2020-05-02 22:56:18 - [ATC] Permission given to Plane 22 to land.
-- 2020-05-02 22:56:18 - [Plane 35] Requesting permission for departing.
-Landing Queue at	t = 35: 22<-24<-26<-28<-30<-32<-34<-36<-
-Departing Queue at	t = 35: 15<-17<-19<-21<-23<-25<-27<-29<-31<-33<-35<-
-- 2020-05-02 22:56:19 - [Plane 37] Requesting permission for departing.
-- 2020-05-02 22:56:20 - [ATC] Plane 22 successfully landed.
-- 2020-05-02 22:56:20 - [ATC] Permission given to Plane 15 to depart.
-- 2020-05-02 22:56:20 - [Plane 39] Requesting permission for departing.
-- 2020-05-02 22:56:21 - [Plane 41] Requesting permission for departing.
-- 2020-05-02 22:56:22 - [ATC] Plane 15 successfully departed.
-- 2020-05-02 22:56:22 - [ATC] Permission given to Plane 24 to land.
-- 2020-05-02 22:56:22 - [Plane 43] Requesting permission for departing.
-- 2020-05-02 22:56:23 - [Plane 38] Requesting permission for landing.
-- 2020-05-02 22:56:24 - [ATC] Plane 24 successfully landed.
-- 2020-05-02 22:56:24 - [ATC] Permission given to Plane 26 to land.
-Landing Queue at	t = 40: 26<-28<-30<-32<-34<-36<-38<-
-Departing Queue at	t = 40: 17<-19<-21<-23<-25<-27<-29<-31<-33<-35<-37<-39<-41<-43<-
-- 2020-05-02 22:56:24 - [Plane 666666] Requesting permission for emergency landing.
-- 2020-05-02 22:56:25 - [Plane 40] Requesting permission for landing.
-- 2020-05-02 22:56:26 - [ATC] Plane 26 successfully landed.
-- 2020-05-02 22:56:26 - [ATC] Permission given to Plane 666666 for emergency landing.
-- 2020-05-02 22:56:26 - [Plane 42] Requesting permission for landing.
-- 2020-05-02 22:56:27 - [Plane 45] Requesting permission for departing.
-- 2020-05-02 22:56:28 - [ATC] Emergency Plane 666666 finished landing.
-- 2020-05-02 22:56:28 - [ATC] Permission given to Plane 28 to land.
-- 2020-05-02 22:56:28 - [Plane 44] Requesting permission for landing.
-Landing Queue at	t = 45: 28<-30<-32<-34<-36<-38<-40<-42<-44<-
-Departing Queue at	t = 45: 17<-19<-21<-23<-25<-27<-29<-31<-33<-35<-37<-39<-41<-43<-45<-
-- 2020-05-02 22:56:29 - [Plane 46] Requesting permission for landing.
-- 2020-05-02 22:56:30 - [ATC] Plane 28 successfully landed.
-- 2020-05-02 22:56:30 - [ATC] Permission given to Plane 17 to depart.
-- 2020-05-02 22:56:30 - [Plane 47] Requesting permission for departing.
-- 2020-05-02 22:56:31 - [Plane 48] Requesting permission for landing.
-- 2020-05-02 22:56:32 - [ATC] Plane 17 successfully departed.
-- 2020-05-02 22:56:32 - [ATC] Permission given to Plane 30 to land.
-- 2020-05-02 22:56:32 - [Plane 49] Requesting permission for departing.
-- 2020-05-02 22:56:33 - [Plane 50] Requesting permission for landing.
-- 2020-05-02 22:56:34 - [ATC] Plane 30 successfully landed.
-- 2020-05-02 22:56:34 - [ATC] Permission given to Plane 32 to land.
-Landing Queue at	t = 50: 32<-34<-36<-38<-40<-42<-44<-46<-48<-50<-
-- 2020-05-02 22:56:34 - [Plane 52] Requesting permission for landing.
-Departing Queue at	t = 50: 19<-21<-23<-25<-27<-29<-31<-33<-35<-37<-39<-41<-43<-45<-47<-49<-
-- 2020-05-02 22:56:35 - [Plane 51] Requesting permission for departing.
-- 2020-05-02 22:56:36 - [ATC] Plane 32 successfully landed.
-- 2020-05-02 22:56:36 - [ATC] Permission given to Plane 34 to land.
-- 2020-05-02 22:56:36 - [Plane 54] Requesting permission for landing.
-- 2020-05-02 22:56:37 - [Plane 56] Requesting permission for landing.
-- 2020-05-02 22:56:38 - [ATC] Plane 34 successfully landed.
-- 2020-05-02 22:56:38 - [ATC] Permission given to Plane 36 to land.
-- 2020-05-02 22:56:38 - [Plane 53] Requesting permission for departing.
-Landing Queue at	t = 55: 36<-38<-40<-42<-44<-46<-48<-50<-52<-54<-56<-
-- 2020-05-02 22:56:39 - [Plane 55] Requesting permission for departing.
-Departing Queue at	t = 55: 19<-21<-23<-25<-27<-29<-31<-33<-35<-37<-39<-41<-43<-45<-47<-49<-51<-53<-55<-
-- 2020-05-02 22:56:40 - [ATC] Plane 36 successfully landed.
-- 2020-05-02 22:56:40 - [ATC] Permission given to Plane 19 to depart.
-- 2020-05-02 22:56:40 - [Plane 57] Requesting permission for departing.
-- 2020-05-02 22:56:41 - [Plane 59] Requesting permission for departing.
-- 2020-05-02 22:56:42 - [ATC] Plane 19 successfully departed.
-- 2020-05-02 22:56:42 - [ATC] Permission given to Plane 21 to depart.
-- 2020-05-02 22:56:42 - [Plane 61] Requesting permission for departing.
-- 2020-05-02 22:56:43 - [Plane 63] Requesting permission for departing.
-- 2020-05-02 22:56:44 - [ATC] Plane 21 successfully departed.
-Landing Queue at	t = 60: 38<-40<-42<-44<-46<-48<-50<-52<-54<-56<-
-Departing Queue at	t = 60: 23<-25<-27<-29<-31<-33<-35<-37<-39<-41<-43<-45<-47<-49<-51<-53<-55<-57<-59<-61<-63<-
-- 2020-05-02 22:56:44 - [Plane 65] Requesting permission for departing.
+- 2020-05-03 02:36:41 - [Plane 29] Requesting permission for departing.
+- 2020-05-03 02:36:42 - [ATC] Plane 13 successfully departed.
+- 2020-05-03 02:36:42 - [ATC] Permission given to Plane 15 to depart.
+- 2020-05-03 02:36:42 - [Plane 26] Requesting permission for landing.
+- 2020-05-03 02:36:43 - [Plane 31] Requesting permission for departing.
+- 2020-05-03 02:36:44 - [ATC] Plane 15 successfully departed.
+- 2020-05-03 02:36:44 - [ATC] Permission given to Plane 14 to land.
+- 2020-05-03 02:36:44 - [Plane 28] Requesting permission for landing.
+- 2020-05-03 02:36:45 - [Plane 33] Requesting permission for departing.
+- 2020-05-03 02:36:46 - [ATC] Plane 14 successfully landed.
+- 2020-05-03 02:36:46 - [ATC] Permission given to Plane 16 to land.
+Landing Queue at	t = 30: 16<-18<-20<-22<-24<-26<-28<-
+Departing Queue at	t = 30: 17<-19<-21<-23<-25<-27<-29<-31<-33<-
+- 2020-05-03 02:36:46 - [Plane 30] Requesting permission for landing.
+- 2020-05-03 02:36:47 - [Plane 32] Requesting permission for landing.
+- 2020-05-03 02:36:48 - [ATC] Plane 16 successfully landed.
+- 2020-05-03 02:36:48 - [ATC] Permission given to Plane 18 to land.
+- 2020-05-03 02:36:48 - [Plane 34] Requesting permission for landing.
+- 2020-05-03 02:36:49 - [Plane 36] Requesting permission for landing.
+- 2020-05-03 02:36:50 - [ATC] Plane 18 successfully landed.
+- 2020-05-03 02:36:50 - [ATC] Permission given to Plane 17 to depart.
+- 2020-05-03 02:36:50 - [Plane 35] Requesting permission for departing.
+Landing Queue at	t = 35: 20<-22<-24<-26<-28<-30<-32<-34<-36<-
+Departing Queue at	t = 35: 17<-19<-21<-23<-25<-27<-29<-31<-33<-35<-37<-
+- 2020-05-03 02:36:51 - [Plane 37] Requesting permission for departing.
+- 2020-05-03 02:36:52 - [ATC] Plane 17 successfully departed.
+- 2020-05-03 02:36:52 - [ATC] Permission given to Plane 20 to land.
+- 2020-05-03 02:36:52 - [Plane 39] Requesting permission for departing.
+- 2020-05-03 02:36:53 - [Plane 41] Requesting permission for departing.
+- 2020-05-03 02:36:54 - [ATC] Plane 20 successfully landed.
+- 2020-05-03 02:36:54 - [ATC] Permission given to Plane 22 to land.
+- 2020-05-03 02:36:54 - [Plane 43] Requesting permission for departing.
+- 2020-05-03 02:36:55 - [Plane 38] Requesting permission for landing.
+- 2020-05-03 02:36:56 - [ATC] Plane 22 successfully landed.
+- 2020-05-03 02:36:56 - [ATC] Permission given to Plane 19 to depart.
+Landing Queue at	t = 40: 24<-26<-28<-30<-32<-34<-36<-38<-
+Departing Queue at	t = 40: 19<-21<-23<-25<-27<-29<-31<-33<-35<-37<-39<-41<-43<-
+- 2020-05-03 02:36:56 - [Plane 6666] Requesting permission for emergency landing.
+- 2020-05-03 02:36:57 - [Plane 40] Requesting permission for landing.
+- 2020-05-03 02:36:58 - [ATC] Plane 19 successfully departed.
+- 2020-05-03 02:36:58 - [ATC] Permission given to Plane 6666 for emergency landing.
+- 2020-05-03 02:36:58 - [Plane 42] Requesting permission for landing.
+- 2020-05-03 02:36:59 - [Plane 45] Requesting permission for departing.
+- 2020-05-03 02:37:00 - [ATC] Emergency Plane 6666 finished landing.
+- 2020-05-03 02:37:00 - [ATC] Permission given to Plane 21 to depart.
+- 2020-05-03 02:37:00 - [Plane 44] Requesting permission for landing.
+Landing Queue at	t = 45: 24<-26<-28<-30<-32<-34<-36<-38<-40<-42<-44<-
+Departing Queue at	t = 45: 21<-23<-25<-27<-29<-31<-33<-35<-37<-39<-41<-43<-45<-
+- 2020-05-03 02:37:01 - [Plane 46] Requesting permission for landing.
+- 2020-05-03 02:37:02 - [ATC] Plane 21 successfully departed.
+- 2020-05-03 02:37:02 - [ATC] Permission given to Plane 24 to land.
+- 2020-05-03 02:37:02 - [Plane 47] Requesting permission for departing.
+- 2020-05-03 02:37:03 - [Plane 48] Requesting permission for landing.
+- 2020-05-03 02:37:04 - [ATC] Plane 24 successfully landed.
+- 2020-05-03 02:37:04 - [ATC] Permission given to Plane 26 to land.
+- 2020-05-03 02:37:04 - [Plane 49] Requesting permission for departing.
+- 2020-05-03 02:37:05 - [Plane 50] Requesting permission for landing.
+- 2020-05-03 02:37:06 - [ATC] Plane 26 successfully landed.
+- 2020-05-03 02:37:06 - [ATC] Permission given to Plane 28 to land.
+Landing Queue at	t = 50: 28<-30<-32<-34<-36<-38<-40<-42<-44<-46<-48<-50<-
+Departing Queue at	t = 50: 23<-25<-27<-29<-31<-33<-35<-37<-39<-41<-43<-45<-47<-49<-
+- 2020-05-03 02:37:06 - [Plane 52] Requesting permission for landing.
+- 2020-05-03 02:37:07 - [Plane 51] Requesting permission for departing.
+- 2020-05-03 02:37:08 - [ATC] Plane 28 successfully landed.
+- 2020-05-03 02:37:08 - [ATC] Permission given to Plane 23 to depart.
+- 2020-05-03 02:37:08 - [Plane 54] Requesting permission for landing.
+- 2020-05-03 02:37:09 - [Plane 56] Requesting permission for landing.
+- 2020-05-03 02:37:10 - [ATC] Plane 23 successfully departed.
+- 2020-05-03 02:37:10 - [ATC] Permission given to Plane 30 to land.
+- 2020-05-03 02:37:10 - [Plane 53] Requesting permission for departing.
+Landing Queue at	t = 55: 30<-32<-34<-36<-38<-40<-42<-44<-46<-48<-50<-52<-54<-56<-
+Departing Queue at	t = 55: 25<-27<-29<-31<-33<-35<-37<-39<-41<-43<-45<-47<-49<-51<-53<-
+- 2020-05-03 02:37:11 - [Plane 55] Requesting permission for departing.
+- 2020-05-03 02:37:12 - [ATC] Plane 30 successfully landed.
+- 2020-05-03 02:37:12 - [ATC] Permission given to Plane 32 to land.
+- 2020-05-03 02:37:12 - [Plane 57] Requesting permission for departing.
+- 2020-05-03 02:37:13 - [Plane 59] Requesting permission for departing.
+- 2020-05-03 02:37:14 - [ATC] Plane 32 successfully landed.
+- 2020-05-03 02:37:14 - [ATC] Permission given to Plane 34 to land.
+- 2020-05-03 02:37:14 - [Plane 61] Requesting permission for departing.
+- 2020-05-03 02:37:15 - [Plane 63] Requesting permission for departing.
+- 2020-05-03 02:37:16 - [ATC] Plane 34 successfully landed.
+Landing Queue at	t = 60: 36<-38<-40<-42<-44<-46<-48<-50<-52<-54<-56<-
+- 2020-05-03 02:37:16 - [Plane 65] Requesting permission for departing.
+Departing Queue at	t = 60: 25<-27<-29<-31<-33<-35<-37<-39<-41<-43<-45<-47<-49<-51<-53<-55<-57<-59<-61<-63<-
 ------------------------------------------------------------------------------
 Plane ID       Status         Request Time   Runway Time    Turnaround Time
 2              Landing        0              2              2              
 1              Departing      0              4              4              
 3              Departing      1              6              5              
 5              Departing      2              8              6              
-7              Departing      3              14             11             
+7              Departing      3              12             9              
 4              Landing        4              10             6              
-9              Departing      5              20             15             
-6              Landing        6              12             6              
-11             Departing      7              24             17             
+9              Departing      5              16             11             
+6              Landing        6              14             8              
+11             Departing      7              22             15             
 13             Departing      8              26             18             
-8              Landing        9              16             7              
-10             Landing        10             18             8              
-15             Departing      11             38             27             
-12             Landing        12             22             10             
-17             Departing      13             48             35             
-19             Departing      14             58             44             
-21             Departing      15             60             45             
-14             Landing        16             28             12             
-16             Landing        17             30             13             
-18             Landing        18             32             14             
-23             Departing      19             Never          ∞            
-20             Landing        20             34             14             
-22             Landing        21             36             15             
+8              Landing        9              18             9              
+10             Landing        10             20             10             
+15             Departing      11             28             17             
+12             Landing        12             24             12             
+17             Departing      13             36             23             
+19             Departing      14             42             28             
+21             Departing      15             46             31             
+14             Landing        16             30             14             
+16             Landing        17             32             15             
+18             Landing        18             34             16             
+23             Departing      19             54             35             
+20             Landing        20             38             18             
+22             Landing        21             40             19             
 25             Departing      22             Never          ∞            
 27             Departing      23             Never          ∞            
-24             Landing        24             40             16             
+24             Landing        24             48             24             
 29             Departing      25             Never          ∞            
-26             Landing        26             42             16             
+26             Landing        26             50             24             
 31             Departing      27             Never          ∞            
-28             Landing        28             46             18             
+28             Landing        28             52             24             
 33             Departing      29             Never          ∞            
-30             Landing        30             50             20             
-32             Landing        31             52             21             
-34             Landing        32             54             22             
-36             Landing        33             56             23             
+30             Landing        30             56             26             
+32             Landing        31             58             27             
+34             Landing        32             60             28             
+36             Landing        33             Never          ∞            
 35             Departing      34             Never          ∞            
 37             Departing      35             Never          ∞            
 39             Departing      36             Never          ∞            
 41             Departing      37             Never          ∞            
 43             Departing      38             Never          ∞            
 38             Landing        39             Never          ∞            
-666666         Emergency      40             44             4              
+6666           Emergency      40             44             4              
 40             Landing        41             Never          ∞            
 42             Landing        42             Never          ∞            
 45             Departing      43             Never          ∞            
