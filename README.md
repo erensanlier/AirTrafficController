@@ -6,13 +6,16 @@ mutex and cond_var used to prevent collision on the runway.
 
 ## About implemented scheduling algorithm
 
-To prevent starvation of Plane threads, the scheduling algorithm decides which plane to go comparing waiting times of the first elements on the both queues. 
+To prevent starvation of Plane threads, the scheduling algorithm decides which plane to go comparing waiting times of the first elements on the both queues.
 
 ```c
 if((wait_time_of_landing_plane / wait_time_of_departing_plane) > some_multiplier){
     favor_landing_plane();
 }
 ```
+## About implemented atomic queue
+
+A data structure named atomic_plane_queue was implemented. This class has a pthread_mutex and a std::queue inside. For every function call made to the queue, mutex gets locked and released after execution. One thread at a time can access the queue using this method.
 
 ## Usage
 
@@ -30,7 +33,7 @@ Default queue log time is set to 5 seconds.
 Parameters in the section down below can be added. Also to output can be directed using the notation:
 
 ```shell
-./a.out > output.txt
+./a.out > output.log
 ```
 
 ## Parameters
@@ -56,6 +59,9 @@ During the runtime of threads, they log their activities to the standard output.
 
 3- Snapshot of planes after the simulation finishes.
 
+```shell
+out.log file prepared with -> ./a.out -s 60 -p 0.5 -n 5 -seed 1
+```
 
 
 ## License
