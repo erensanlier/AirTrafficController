@@ -13,6 +13,9 @@ if((wait_time_of_landing_plane / wait_time_of_departing_plane) > some_multiplier
     favor_landing_plane();
 }
 ```
+
+The scheduling algorithms that favors landing planes and favoring landing planes if departing queue < 5 can be found commented out in the air_traffic_control function.
+
 ## About implemented atomic queue
 
 A data structure named atomic_plane_queue was implemented. This class has a pthread_mutex and a std::queue inside. For every function call made to the queue, mutex gets locked and released after execution. One thread at a time can access the queue using this method.
